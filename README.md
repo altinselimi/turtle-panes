@@ -2,6 +2,9 @@
 
 **Turtle Panes** is a pane management library designed for **Vue** and **React**, enabling flexible and efficient management of UI panes. It provides a simple and scalable API to create, organize, and control panes in your application.
 
+![demo](https://github.com/user-attachments/assets/c171c7b5-4da6-4542-b739-e0d207cf3800)
+
+
 ---
 
 ## 🚀 Features
