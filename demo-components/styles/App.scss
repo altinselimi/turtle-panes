@@ -41,14 +41,6 @@
   }
 }
 
-@mixin demo-pane-min-height-on-mobile {
-  @media (max-width: 768px) {
-    .turtle-panes__wrapper {
-      min-height: 250px;
-    }
-  }
-}
-
 @mixin divider-on-mobile-increased-area {
   @media (max-width: 768px) {
     .turtle-panes__divider-target {
@@ -80,8 +72,10 @@
     }
     &:nth-child(8n + 2) {
       background-color: var(--white);
+      .turtle-panes__wrapper {
+        min-height: 250px;
+      }
       @include center-demo-pane();
-      @include demo-pane-min-height-on-mobile();
     }
     &:nth-child(8n + 3) {
       background-color: var(--blue);
@@ -90,7 +84,9 @@
         color: var(--black);
       }
       @include right-demo-pane();
-      @include demo-pane-min-height-on-mobile();
+      .turtle-panes__wrapper {
+        min-height: 250px;
+      }
     }
     &:nth-child(8n + 4) {
       background-color: var(--black);
