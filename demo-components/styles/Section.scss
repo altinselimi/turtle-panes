@@ -1,0 +1,22 @@
+.demo-section {
+    min-height: clamp(100px, 100vh, 800px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__container {
+      flex: 1;
+      display: flex;
+      // padding: 2rem;
+      container-type: inline-size;
+      width: 100%;
+      overflow: hidden;
+    }
+    &__content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }

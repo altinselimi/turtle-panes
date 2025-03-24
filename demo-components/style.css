@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 400 500 900;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2)
+    format("woff2");
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --yellow: #ffd14d;
+  --red: #ff004d;
+  --blue: #0e3ff2;
+  --black: #000;
+  --white: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+li {
+  display: inline-flex;
+}
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+submit {
+  border: none;
+}
+button {
+  border-radius: 4cqw;
+  font-size: clamp(1rem, 1.8cqw, 1.5rem);
+  padding: 1cqw 2cqw;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}

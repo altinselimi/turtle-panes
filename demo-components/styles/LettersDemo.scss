@@ -1,0 +1,39 @@
+.demo-intro {
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      align-items: center;
+    }
+    &__logo-letter {
+      flex: 1;
+      text-align: center;
+      font-size: 8cqw;
+      font-weight: 900;
+      color: var(--white);
+      background-color: var(--black);
+      padding: 0px 4cqw;
+      @media screen and (max-width: 650px) {
+        font-size: 12cqw;
+      }
+    }
+    &__logo-text {
+      font-size: 7cqw;
+      font-weight: 900;
+      text-align: center;
+      margin: 2cqw;
+    }
+    &__tagline {
+      text-align: center;
+      font-weight: 600;
+    }
+    &__social-links svg {
+      width: 20px;
+      height: 20px;
+    }
+    &__docs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }

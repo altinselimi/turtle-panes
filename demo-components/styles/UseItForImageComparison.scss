@@ -1,0 +1,32 @@
+.before-after {
+  &__wrapper {
+    background: whitesmoke;
+    border-radius: 20px;
+    position: relative;
+    container-type: inline-size;
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      min-height: 300px;
+    }
+  }
+  &__after-container {
+    background-color: whitesmoke;
+    height: 100%;
+    position: relative;
+    flex: 1;
+    img {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      right:0;
+      width: 100cqw;
+    }
+  }
+}

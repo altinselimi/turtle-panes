@@ -1,0 +1,85 @@
+.turtle-panes {
+  &__wrapper {
+    display: flex;
+    overflow: hidden;
+    align-self: flex-start;
+    touch-action: none;
+    max-width: 100%;
+    &:has(> .turtle-panes__pane.is-flex) {
+      align-self: stretch;
+    }
+    &.is-resizing {
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+  }
+}
+
+.turtle-panes {
+  &__pane {
+    display: flex;
+    justify-content: space-between;
+    &:nth-last-child(1 of .is-visible) .turtle-panes__divider-wrapper {
+      display: none;
+    }
+    &.is-hidden {
+      display: none;
+    }
+    &.is-flex {
+      flex: 1;
+    }
+  }
+
+  &__pane-content {
+    // WORKAROUND
+    // This element is added as a workaround for content.scrollWidth not reporting correct values:
+    // When the immediate rendered block element has justify-content applied, the scrollWidth
+    // does not return the full width of the content.
+    &-wrapper {
+      display: flex;
+      height: 100%;
+    }
+  }
+}
+
+.turtle-panes__divider {
+  &-wrapper {
+    width: 0px;
+    overflow: visible;
+    z-index: 2;
+    position: relative;
+    pointer-events: all;
+  }
+  &-target {
+    cursor: col-resize;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &-custom {
+    cursor: col-resize;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: stretch;
+  }
+}

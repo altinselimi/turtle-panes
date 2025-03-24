@@ -1,0 +1,59 @@
+{
+  "name": "@turtle-panes/core",
+  "version": "1.0.3",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./state/context": {
+      "types": "./dist/state/context.d.ts",
+      "import": "./dist/state/context.js",
+      "default": "./dist/state/context.js"
+    },
+    "./state/contextHelpers": {
+      "types": "./dist/state/contextHelpers.d.ts",
+      "import": "./dist/state/contextHelpers.js",
+      "default": "./dist/state/contextHelpers.js"
+    },
+    "./helpers/interactionHelpers": {
+      "types": "./dist/helpers/interactionHelpers.d.ts",
+      "import": "./dist/helpers/interactionHelpers.js",
+      "default": "./dist/helpers/interactionHelpers.js"
+    },
+    "./helpers/useLogs": {
+      "types": "./dist/helpers/useLogs.d.ts",
+      "import": "./dist/helpers/useLogs.js",
+      "default": "./dist/helpers/useLogs.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.js",
+      "default": "./dist/constants/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js",
+      "default": "./dist/types/index.js"
+    }
+  },
+  "devDependencies": {
+    "vite": "^6.2.3",
+    "vite-plugin-dts": "^4.5.3"
+  }
+}
