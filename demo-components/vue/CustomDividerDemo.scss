@@ -1,0 +1,14 @@
+.turtle-panes__custom-divider {
+    align-self: center;
+    font-size: 2rem;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

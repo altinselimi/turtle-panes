@@ -1,0 +1,35 @@
+.is-placeholder {
+    background-color: var(--black);
+    opacity: 0.1;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .dashboard-demo {
+    &__panes {
+      margin: 20px 0px;
+      border-radius: 20px;
+      align-self: stretch;
+      background-color: var(--white);
+      height: 40cqw;
+    }
+    &__first-pane {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: flex-start;
+      width: 100%;
+      overflow-y: hidden;
+    }
+  }
+  
+  .dashboard-demo {
+    &__hide-manually {
+      display: flex;
+      gap: 15px;
+      align-self: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+  }
