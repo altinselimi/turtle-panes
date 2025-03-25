@@ -37,13 +37,13 @@
         </a>
       </div>
       <div class="turtle-panes__links demo-intro__social-links">
-        <a href="">
+        <a href="https://github.com/altinselimi/turtle-panes">
           <GitHubIcon />
         </a>
-        <a href="">
+        <a href="https://bsky.app/profile/altinselimi.bsky.social">
           <BlueskyIcon />
         </a>
-        <a href="">
+        <a href="https://www.npmjs.com/package/@turtle-panes/vue">
           <NpmIcon />
         </a>
       </div>
