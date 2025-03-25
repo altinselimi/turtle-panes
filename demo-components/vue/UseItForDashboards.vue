@@ -73,9 +73,9 @@
 </template>
 <script setup lang="ts">
 import { ref, computed, watchEffect } from "vue";
-import { TurtlePanes, TurtlePane } from "../../packages/vue"
+import { TurtlePanes, TurtlePane } from "@turtle-panes/vue"
 import Section from "./Section.vue";
-import type { ExposedFunctions } from "../../packages/core/src/types";
+import type { ExposedFunctions } from "@turtle-panes/core/types";
 import Checkbox from "./Checkbox.vue";
 import { ReactIcon, VueDotjsIcon as VueIcon } from "vue3-simple-icons";
 
