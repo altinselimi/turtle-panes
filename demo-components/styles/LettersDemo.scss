@@ -1,4 +1,9 @@
 .demo-intro {
+    &__github-star {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
     &__logo {
       display: flex;
       flex-direction: column;

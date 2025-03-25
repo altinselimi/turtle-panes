@@ -3,6 +3,9 @@
     contentStyle="align-items: center;"
   >
     <div class="demo-intro__logo" alt="logo with text TURTLE PANES">
+      <div class="demo-intro__github-star">
+        <iframe src="https://ghbtns.com/github-btn.html?user=altinselimi&repo=turtle-panes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+      </div>
       <TurtlePanes style="width: 100%; justify-content: center;">
         <TurtlePane
           v-for="letter in 'TURTLE'.split('')"
