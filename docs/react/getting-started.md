@@ -22,7 +22,8 @@ A very simple setup would be:
 
 #### React
 ```tsx
-import { TurtlePanes } from '@turtle-panes/react';
+import TurtlePanes from '@turtle-panes/react';
+import '@turtle-panes/react/style'
 
 const MyComponent = () => {
   return (

@@ -26,6 +26,7 @@ A very simple setup would be:
 ```vue
 <script setup>
 import { TurtlePanes, TurtlePane } from "@turtle-panes/vue";
+import '@turtle-panes/vue/style';
 </script>
 <template>
   <TurtlePanes>
