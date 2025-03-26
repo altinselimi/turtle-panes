@@ -42,9 +42,12 @@
 }
 
 @mixin divider-on-mobile-increased-area {
-  @media (max-width: 768px) {
-    .turtle-panes__divider-target {
-      width: 30px;
+  @media (hover: none) and (pointer: coarse) {
+    .turtle-panes__divider-target, .turtle-panes__divider-custom {
+      width: 40px; // Increased touch target
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

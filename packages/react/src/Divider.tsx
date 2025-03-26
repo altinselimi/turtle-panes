@@ -26,6 +26,7 @@ const Divider: FC<DividerProps> = ({ children, ...props }) => {
   };
 
   const handleMouseMove = (e: MouseEvent | TouchEvent) => {
+    e.preventDefault();
     const eClientX = getMouseClientX(e);
     const movementFromStart = Math.abs(
       eClientX - (clientXOnMouseDown.current as number),

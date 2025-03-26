@@ -55,19 +55,9 @@ const handleMouseMove = (e: MouseEvent | TouchEvent) => {
   const movementFromStart = Math.abs(
     eClientX - (clientXOnMouseDown.value as number),
   );
-  const dividerRect = (
-    dividerRef.value as HTMLElement
-  )?.getBoundingClientRect();
-  const mouseMoveStartThreshold = dividerRect.width / 2;
-  if (
-    !isInteractingWithDivider.value ||
-    movementFromStart < mouseMoveStartThreshold
-  )
-    return;
   try {
     isDraggingToGrowth.value = true;
-    const dividerClientX = dividerRect.left + mouseMoveStartThreshold;
-    const mouseMovementInPx = eClientX - dividerClientX;
+    const mouseMovementInPx = eClientX - movementFromStart;
     const newWidth =
       context.state.panes[props.paneId as number].width + mouseMovementInPx;
     context.updatePaneWidth(props.paneId as number, newWidth);
@@ -91,6 +81,7 @@ const handleMouseUp = () => {
 };
 
 const handleMouseDown = (e: MouseEvent | TouchEvent) => {
+  e.preventDefault();
   if (isInteractingWithAnotherDivider.value) return;
   context.setActivePane(props.paneId as number);
   clientXOnMouseDown.value = getMouseClientX(e);
