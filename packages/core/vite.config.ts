@@ -4,24 +4,19 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   build: {
     lib: {
-      entry: {
-        'index': './src/index.ts',
-        'state/context': './src/state/context.ts',
-        'state/contextHelpers': './src/state/contextHelpers.ts',
-        'helpers/interactionHelpers': './src/helpers/interactionHelpers.ts',
-        'helpers/useLogs': './src/helpers/useLogs.ts',
-        'constants': './src/constants/index.ts',
-        'types': './src/types/index.ts'
-      },
-      formats: ['es']
+      entry: './src/index.ts',
+      formats: ['es'],
+      fileName: 'index'
     },
-    minify: 'esbuild',
+    minify: true,
     rollupOptions: {
       output: {
-        preserveModules: true,
-        entryFileNames: '[name].js'
+        manualChunks: undefined,
+        // This ensures clean output structure
+        entryFileNames: 'index.js'
       }
-    }
+    },
+    sourcemap: true // Helpful for debugging
   },
   plugins: [
     dts({
@@ -31,7 +26,9 @@ export default defineConfig({
       copyDtsFiles: true,
       bundledPackages: [],
       include: ['src/**/*'],
-      exclude: ['src/**/*.spec.ts', 'src/**/*.test.ts']
+      exclude: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
+      // Ensure types are bundled into a single .d.ts file
+      rollupTypes: true
     })
   ]
 });

@@ -8,8 +8,9 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "declaration": true,
-    "declarationDir": "./dist",
+    "declaration": false,
+    "emitDeclarationOnly": false,
+    "declarationDir": null,
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
