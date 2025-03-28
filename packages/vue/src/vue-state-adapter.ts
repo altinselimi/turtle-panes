@@ -1,5 +1,5 @@
 import { createState, createActions } from "@turtle-panes/core";
-import { ContextType } from "@turtle-panes/core/types";
+import type { ContextType } from '@turtle-panes/core'
 import { reactive } from "vue";
 import type { Reactive } from "vue";
 

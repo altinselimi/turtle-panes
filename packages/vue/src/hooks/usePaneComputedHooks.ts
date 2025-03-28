@@ -1,7 +1,7 @@
 import { computed } from "vue";
-import { Pane, ContextType } from "@turtle-panes/core/types";
 import type { Ref } from "vue";
 import { getPaneSiblingId, getVisiblePanes } from "@turtle-panes/core";
+import type { Pane, ContextType } from '@turtle-panes/core';
 
 export const useComputedHooks = (
   paneId: Ref<Pane["id"] | null>,

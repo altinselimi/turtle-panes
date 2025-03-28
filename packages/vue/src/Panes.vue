@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { ref, provide, onMounted, onUnmounted, computed } from "vue";
 import { createContext } from "./vue-state-adapter";
-import type { ExposedFunctions } from "@turtle-panes/core/types";
+import type { ExposedFunctions } from "@turtle-panes/core";
 
 const contextRef = createContext();
 

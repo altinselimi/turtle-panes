@@ -26,8 +26,8 @@ export const slotName = "custom-divider";
 <script setup lang="ts">
 import { ref, inject, computed, useSlots } from "vue";
 import { attachPaneDividerInteractionListeners } from "@turtle-panes/core";
+import type { ContextType } from "@turtle-panes/core";
 import type { Ref, Reactive, Slot } from "vue";
-import { ContextType } from "@turtle-panes/core/types";
 import { useLogs } from "@turtle-panes/core";
 const { logError } = useLogs();
 

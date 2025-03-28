@@ -28,12 +28,12 @@
 </template>
 <script setup lang="ts">
 import { inject, onMounted, ref, computed, useSlots, watchEffect } from "vue";
-import { ContextType, PaneComponentProps } from "@turtle-panes/core/types";
 import type { CSSProperties } from "vue";
 import { useComputedHooks } from "./hooks/usePaneComputedHooks";
 import type { Reactive, Ref } from "vue";
 import Divider from "./Divider.vue";
 import { defaultPaneProps } from "@turtle-panes/core";
+import type { ContextType, PaneComponentProps } from "@turtle-panes/core";
 import { slotName as dividerSlotName } from "./Divider.vue";
 
 const props = withDefaults(defineProps<PaneComponentProps>(), defaultPaneProps);
