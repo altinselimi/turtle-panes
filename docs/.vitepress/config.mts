@@ -4,6 +4,19 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "TurtlePanes 🐢",
   description: "Easily manage multi pane views",
+  head: [['script', {}, `
+    (async () => {
+      try {
+        const script = document.createElement("script");
+        script.defer = true;
+        script.src = "https://cloud.umami.is/script.js";
+        script.dataset.websiteId = "19647df5-af82-427b-976f-a2e6f1246a57";
+        document.body.appendChild(script);
+      } catch (error) {
+        console.error('Failed to load tracking script:', error);
+      }
+    })();
+  `]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
