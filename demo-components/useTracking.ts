@@ -31,7 +31,7 @@ const getElementHierarchy = (element: HTMLElement | null) => {
     return hierarchy.reverse().join(" > ");
 };
 
-export default function useTracking(): { onMountCallback: () => void; onUnmountCallback: () => void } | {} {
+const useTrackingEvents = () : void => {
     let eventCount = 0;
     const maxEvents = 50;
 
@@ -66,18 +66,27 @@ export default function useTracking(): { onMountCallback: () => void; onUnmountC
         });
     }, 200);
 
-    const onMountCallback = () => {
-        document.addEventListener("click", handleClick);
-        document.addEventListener("touchend", handleTap);
-    };
-
     const onUnmountCallback = () => {
         document.removeEventListener("click", handleClick);
         document.removeEventListener("touchend", handleTap);
     };
 
-    return {
-        onMountCallback,
-        onUnmountCallback
+    const onMountCallback = () => {
+        onUnmountCallback();
+        document.addEventListener("click", handleClick);
+        document.addEventListener("touchend", handleTap);
     };
+
+    onMountCallback();
+}
+
+export default () => {
+    const script = document.createElement("script");
+    script.defer = true;
+    script.src = "https://cloud.umami.is/script.js";
+    script.dataset.websiteId = "19647df5-af82-427b-976f-a2e6f1246a57";
+    script.onload = () => {
+        useTrackingEvents();
+    };
+    document.body.appendChild(script);
 }
