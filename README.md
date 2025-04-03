@@ -1,10 +1,22 @@
 # Turtle Panes 🐢
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 **Turtle Panes** is a pane management library designed for **Vue** and **React**, enabling flexible and efficient management of UI panes. It provides a simple and scalable API to create, organize, and control panes in your application.
 
 Demos here: [TurtlePane demos](https://turtlepanes.altinselimi.com)
 
 ![demo](https://github.com/user-attachments/assets/c171c7b5-4da6-4542-b739-e0d207cf3800)
+
+---
+
+## 🤏🏻 Size
+
+| Package | Bundle Size |
+|---------|-------------|
+| Core | ![Core Bundle](https://deno.bundlejs.com/badge?q=@turtle-panes/core@1.0.6&treeshake=[*]&config={%22analysis%22:true,%22esbuild%22:{%22external%22:[%22vue%22]}}) |
+| Vue | ![Vue Bundle](https://deno.bundlejs.com/badge?q=@turtle-panes/vue@1.0.5&treeshake=[*]&config={%22analysis%22:true,%22esbuild%22:{%22external%22:[%22vue%22,%22react%22,%22react-dom%22,%22@turtle-panes/core%22]}}) |
+| React | ![React Bundle](https://deno.bundlejs.com/badge?q=@turtle-panes/react@1.0.7&treeshake=[*]&config={%22analysis%22:true,%22esbuild%22:{%22external%22:[%22vue%22,%22react%22,%22react-dom%22,%22@turtle-panes/core%22]}}) |
 
 
 ---
