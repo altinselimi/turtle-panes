@@ -17,8 +17,8 @@
     "netlify-build": "npm run build && npm run docs:build && npm run merge-dist"
   },
   "dependencies": {
-    "@turtle-panes/react": "^1.0.4",
-    "@turtle-panes/vue": "^1.0.1",
+    "@turtle-panes/react": "^1.0.7",
+    "@turtle-panes/vue": "^1.0.5",
     "vue": "^3.5.12"
   },
   "devDependencies": {
