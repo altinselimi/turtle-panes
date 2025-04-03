@@ -1,6 +1,6 @@
 {
     "name": "@turtle-panes/vue",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "private": false,
     "type": "module",
     "main": "./dist/index.js",
@@ -13,22 +13,7 @@
             "import": "./dist/index.js",
             "default": "./dist/index.js"
         },
-        "./style": "./dist/index.css",
-        "./components/*": {
-            "types": "./dist/components/*.d.ts",
-            "import": "./dist/components/*.js",
-            "default": "./dist/components/*.js"
-        },
-        "./hooks/*": {
-            "types": "./dist/hooks/*.d.ts",
-            "import": "./dist/hooks/*.js",
-            "default": "./dist/hooks/*.js"
-        },
-        "./state/*": {
-            "types": "./dist/state/*.d.ts",
-            "import": "./dist/state/*.js",
-            "default": "./dist/state/*.js"
-        }
+        "./style": "./dist/index.css"
     },
     "files": [
         "dist"

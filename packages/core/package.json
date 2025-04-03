@@ -1,6 +1,6 @@
 {
   "name": "@turtle-panes/core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -11,9 +11,13 @@
     "build:watch": "rollup -c -w",
     "type-check": "tsc --noEmit",
     "clean": "rimraf dist",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "size": "size-limit"
   },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -32,8 +36,7 @@
   },
   "size-limit": [
     {
-      "path": "dist/index.js",
-      "limit": "10 KB"
+      "path": "dist/index.js"
     }
   ]
 }
